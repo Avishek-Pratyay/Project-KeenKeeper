@@ -1,9 +1,32 @@
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FriendCard from "../components/FriendCard";
-import friends from "../data/friends.json";
-
+import friendsData from "../data/friends.json";
+import LoadingSpinner from "../components/Loader";
 export default function Home() {
+  const [friends, setFriends] = useState([]);
+  const [loading, setLoading] = useState(true); // ✅ added
+
+  useEffect(() => {
+    // simulate loading (since you use local JSON)
+    setTimeout(() => {
+      setFriends(friendsData);
+      setLoading(false);
+    }, 800); // small delay to show animation
+  }, []);
+
+  // ✅ show loader first (KEEP navbar & footer same)
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <LoadingSpinner />
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
@@ -13,11 +36,10 @@ export default function Home() {
         <h1 className="text-3xl font-bold">
           Friends to keep close in your life
         </h1>
-        
+
         <p className="text-gray-500 mt-3 max-w-xl mx-auto">
           Your personal shelf of meaningful connections. Browse, tend,and nurture the relationships that matter most.
         </p>
-
 
         <button className="mt-4 bg-green-800 text-white px-4 py-2 rounded">
           + Add a Friend

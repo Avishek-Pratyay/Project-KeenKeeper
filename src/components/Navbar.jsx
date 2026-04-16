@@ -8,8 +8,7 @@ export default function Navbar() {
   return (
     <div className="flex justify-between items-center px-10 py-4 bg-white shadow">
       <div className="flex items-center gap-2">
-        <img src={logo} className="w-6" />
-        <h1 className="font-bold">KeenKeeper</h1>
+        <img src={logo} className="w-20" />
       </div>
 
       <div className="flex gap-3">
