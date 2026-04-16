@@ -113,7 +113,7 @@
     "picture": "https://i.pravatar.cc/150?img=10",
     "email": "ryan@example.com",
     "days_since_contact": 2,
-    "status": "on-track",
+    "status": "overdue",
     "tags": ["gaming"],
     "bio": "Online gaming friend",
     "goal": 7,
