@@ -20,7 +20,7 @@ export default function FriendCard({ friend }) {
 
         <div className="flex justify-center gap-2 mt-2 flex-wrap">
           {friend.tags.map((tag, i) => (
-            <span key={i} className="text-xs bg-gray-200 px-2 rounded">
+            <span key={i} className="text-xs bg-green-200 px-2 rounded">
               {tag}
             </span>
           ))}
