@@ -3,7 +3,7 @@ import { TimelineContext } from "../context/TimelineContext";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// ✅ ICONS (ONLY ADDITION)
+//  ICONS 
 import callIcon from "/assets/call.png";
 import videoIcon from "/assets/video.png";
 import textIcon from "/assets/text.png";
@@ -11,12 +11,12 @@ import textIcon from "/assets/text.png";
 export default function Timeline() {
   const { timeline } = useContext(TimelineContext);
 
-  // ✅ FILTER STATE (restored)
+  
   const [filter, setFilter] = useState("All");
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef();
 
-  // close dropdown on outside click
+  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -38,13 +38,13 @@ export default function Timeline() {
       <Navbar />
 
       <div className="p-10">
-         {/* TITLE */}
+         {}
           <h1 className="text-2xl font-bold">Timeline</h1>
 
-        {/* HEADER (same place as before) */}
+        {}
         <div className="flex items-center gap-6 mb-6">
 
-          {/* FILTER (RESTORED EXACTLY) */}
+          {}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setOpen(!open)}
@@ -86,7 +86,7 @@ export default function Timeline() {
               className="flex items-center bg-white shadow p-4 rounded-lg"
             >
 
-              {/* ✅ ICON (ONLY ADDED) */}
+              {/* ICON (ONLY ADDED) */}
               <img
                 src={
                   item.type === "Call"
@@ -99,7 +99,7 @@ export default function Timeline() {
                 alt="icon"
               />
 
-              {/* ORIGINAL CONTENT (UNCHANGED) */}
+              {}
               <div>
                 <p className="font-semibold">{item.title}</p>
                 <p className="text-sm text-gray-500">{item.date}</p>

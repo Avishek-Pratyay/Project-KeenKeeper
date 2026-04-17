@@ -6,9 +6,9 @@ import { TimelineContext } from "../context/TimelineContext";
 
 export default function Stats() {
 
-  const { timeline } = useContext(TimelineContext); // ✅ your original variable
+  const { timeline } = useContext(TimelineContext); //  original variable
 
-  // ✅ Keep your original logic
+  // Keep original logic
   const data = [
     { name: "Call", value: timeline.filter(t => t.type === "Call").length },
     { name: "Text", value: timeline.filter(t => t.type === "Text").length },
@@ -77,7 +77,7 @@ export default function Stats() {
             </div>
           )}
 
-          {/* Legend (no count as you wanted) */}
+          {}
           <div className="flex justify-center gap-6 mt-4 text-sm">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-green-900"></span>

@@ -9,14 +9,14 @@ export default function Home() {
   const [loading, setLoading] = useState(true); // ✅ added
 
   useEffect(() => {
-    // simulate loading (since you use local JSON)
+    
     setTimeout(() => {
       setFriends(friendsData);
       setLoading(false);
     }, 800); // small delay to show animation
   }, []);
 
-  // ✅ show loader first (KEEP navbar & footer same)
+  
   if (loading) {
     return (
       <>

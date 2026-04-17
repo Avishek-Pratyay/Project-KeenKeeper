@@ -44,7 +44,7 @@ export default function FriendDetails() {
 
               <h2 className="font-semibold text-lg">{friend.name}</h2>
 
-              {/* ✅ STATUS COLOR APPLIED */}
+              {/*  STATUS COLOR APPLIED */}
               <span
                 className={`text-xs px-3 py-1 rounded-full inline-block mt-1 ${getStatusColor(friend.status)}`}
               >
